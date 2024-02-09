@@ -1,15 +1,22 @@
 <?php
 
-class Carro {
+require_once 'Veiculo.php';
+
+ class Carro extends Veiculo{
     private int $brand;
 
 
     public function __construct(
-        private string $model, 
-        private string $color, 
-        private int $year
+         string $model, 
+         string $color, 
+         int $year
         )
     {
+        parent::__construct(
+            $model, 
+            $color, 
+            $year
+        );
 
         $this->brand = [
             'Hb20' => 'Hyndai',
